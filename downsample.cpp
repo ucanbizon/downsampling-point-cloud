@@ -95,7 +95,7 @@ void filterPoints(vec3<int> & leafCount, vector< vec3<double> > & inCloud, vecto
         vec3<double> centroid(inCloud[indices[cp].idx].x, inCloud[indices[cp].idx].y, inCloud[indices[cp].idx].z);
         int i = cp + 1;
         while(i < inCloud.size() && indices[cp].box == indices[i].box){
-            centroid += inCloud[indices[i].idx]
+            centroid += inCloud[indices[i].idx];
             ++i;
         }
         centroid.x /= static_cast<double>(i - cp);
